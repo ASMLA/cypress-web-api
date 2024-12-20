@@ -1,6 +1,6 @@
 # XPTO
 
-Repositório criado para o xxxx
+Repositório criado para o desafio de automação da empresa Winnin
 
 ### Pré-requisitos
 
