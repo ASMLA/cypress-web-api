@@ -1,0 +1,36 @@
+{
+    "type": "object",
+    "properties": {
+      "data": {
+        "type": "object",
+        "properties": {
+          "user": {
+            "type": "object",
+            "properties": {
+              "id": { "type": "string" },
+              "username": { "type": "string" },
+              "email": { "type": "string" },
+              "address": {
+                "type": "object",
+                "properties": {
+                  "geo": {
+                    "type": "object",
+                    "properties": {
+                      "lat": { "type": "number" },
+                      "lng": { "type": "number" }
+                    },
+                    "required": ["lat", "lng"]
+                  }
+                },
+                "required": ["geo"]
+              }
+            },
+            "required": ["id", "username", "email", "address"]
+          }
+        },
+        "required": ["user"]
+      }
+    },
+    "required": ["data"]
+  }
+  

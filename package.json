@@ -1,0 +1,21 @@
+{
+  "name": "desafio-quality-assurance",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "test": "cypress run"
+  },
+  "author": "Andre Leite",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "cypress": "^13.17.0",
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "mustache": "^4.2.0"
+  },
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "cypress-visual-regression": "^5.2.2"
+  }
+}
