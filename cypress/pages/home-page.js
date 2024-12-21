@@ -22,6 +22,7 @@ class HomePage {
 
     checkThePageTitle(){
         cy.get(this.elements.titlePage).should('be.visible').compareSnapshot("title", {errorThreshold: 1});
+        cy.wait('@loadRequest');
         cy.contains('Wikipedia A enciclopédia livre');
         return this;
     }
