@@ -1,6 +1,6 @@
-# XPTO
-
-Repositório criado para o xxxx
+# Desafio Quality Assurance - WEB (Wikipedi) + API (GraphqlZero)
+ 
+Repositório criado para o desafio de automação da empresa Winnin
 
 ### Pré-requisitos
 
