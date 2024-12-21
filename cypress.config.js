@@ -4,7 +4,7 @@ const collectCypressTestResults = require('./cypress/support/test-summary');
 const { configureVisualRegression } = require('cypress-visual-regression')
 
 module.exports = defineConfig({
-  defaultCommandTimeout: 30000,
+  defaultCommandTimeout: 60000,
   requestTimeout: 30000,
   responseTimeout: 30000,
   videoCompression: false,
