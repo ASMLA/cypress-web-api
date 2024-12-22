@@ -6,6 +6,7 @@ Cypress.Commands.add('goToWikipediaWebsite', () => {
     cy.intercept('GET', '/portal/wikipedia.org/**').as('getHomeInfos');
     cy.intercept('GET', '**/fundraising/**', { statusCode: 200, body: {} }).as('blockFundraising');
     cy.visit('https://www.wikipedia.org');  
+    cy.wait('@blockFundraising');
     cy.wait('@getHomeInfos').its('response.statusCode').should('eq', 200);
     cy.compareSnapshot("home", {failSilently: true, errorThreshold: 1});
 })
