@@ -4,6 +4,7 @@ import articlePage from "../pages/article-page";
 Cypress.Commands.add('goToWikipediaWebsite', () => {
     cy.clearCookies();
     cy.intercept('GET', '/portal/wikipedia.org/**').as('getHomeInfos');
+    cy.viewport(1280, 720);
     cy.visit('https://www.wikipedia.org');
     
     // Verifica se o popup "Wikipedia is not for sale" aparece
