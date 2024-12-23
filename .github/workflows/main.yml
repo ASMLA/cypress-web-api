@@ -12,6 +12,8 @@ on:
 jobs:
   run-tests:
     runs-on: ubuntu-latest
+    env:
+      TZ: America/Sao_Paulo # Define o timezone no nível do job
     steps:
       - name: Checkout Test Repository
         uses: actions/checkout@v4
@@ -21,16 +23,12 @@ jobs:
         with:
           chrome-version: stable
 
-      - name: Set timezone to America/Sao_Paulo
-        env:
-          TZ: America/Sao_Paulo
+      - name: Verify Timezone
         run: |
-          echo "Timezone set to: $TZ"
+          echo "Timezone configurado como: $TZ"
           date
 
       - name: Run Chrome Tests
-        env:
-          TZ: America/Sao_Paulo
         uses: cypress-io/github-action@v6
         with:
           browser: chrome
