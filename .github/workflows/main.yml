@@ -13,8 +13,6 @@ on:
 jobs:
   run-tests:
     runs-on: ubuntu-latest
-    env:
-     TZ: America/Sao_Paulo
     steps:
       - name: Checkout Test Repository
         uses: actions/checkout@v4
