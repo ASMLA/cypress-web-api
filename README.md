@@ -39,7 +39,6 @@ Repositório criado para o desafio de automação da empresa Winnin
 │   │   ├── summary.md (modelo de sumário para integração com Github Actions)
 │   ├── worflows
 │   │   ├── main.yml
-│   │   ├── workflow.yml
 ├── cypress
 │   ├── e2e (cenários web)
 │   │   ├── wikipedia
@@ -48,7 +47,7 @@ Repositório criado para o desafio de automação da empresa Winnin
 │   │   ├── userSchema.json
 │   ├── pages (mapeamento de elementos de página)
 │   │   ├── home-page.js
-│   │   ├── search-result-page.js
+│   │   ├── article-page.js
 │   ├── reports (relatórios de execução)
 │   ├── snapshots (regressão visual)
 │   ├── support
@@ -82,3 +81,16 @@ Repositório criado para o desafio de automação da empresa Winnin
    ```sh
    $ npm run cy:open
    ```
+
+## Entendimento sobre o GitHubActions:
+
+O arquivo *main.yml* descreve um conjunto de tarefas que são executadas automaticamente toda vez que alguém envia novas alterações no código (faz um "push") para a branch principal ("main") do projeto, abre um pedido de mudança (pull request) para essa branch, ou aciona manualmente o processo.
+
+1. *Quando o código é atualizado ou revisado*, esse "fluxo de trabalho" é iniciado.  
+2. Ele *baixa o código mais recente* do repositório (como se fosse fazer o download para o computador dele).  
+3. Em seguida, ele *instala o navegador Google Chrome* para fazer testes automatizados.  
+4. Com o Chrome pronto, *roda testes automáticos* do site ou aplicativo para verificar se tudo está funcionando corretamente.  
+5. Depois de executar os testes, ele *gera relatórios* mostrando o que deu certo, o que deu errado e tira "fotos" da tela (snapshots) para comparar se a aparência do site está igual ao esperado.  
+6. Por fim, esses relatórios e imagens são *guardados em arquivos* que podem ser consultados mais tarde por qualquer pessoa da equipe.
+
+Resumindo: esse fluxo garante que sempre que houver mudanças no código, testes sejam realizados automaticamente e as informações sobre o resultado desses testes fiquem disponíveis para análise. Isso ajuda a encontrar problemas cedo e manter a qualidade do projeto.
