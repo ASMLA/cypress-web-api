@@ -22,14 +22,15 @@ jobs:
           chrome-version: stable
 
       - name: Set timezone to America/Sao_Paulo
+        env:
+          TZ: America/Sao_Paulo
         run: |
-          echo "TZ=America/Sao_Paulo" >> /etc/environment
-          sudo timedatectl set-timezone America/Sao_Paulo
-
-      - name: Verify timezone
-        run: date
+          echo "Timezone set to: $TZ"
+          date
 
       - name: Run Chrome Tests
+        env:
+          TZ: America/Sao_Paulo
         uses: cypress-io/github-action@v6
         with:
           browser: chrome
