@@ -1,4 +1,4 @@
-# Desafio Quality Assurance - WEB (Wikipedia) + API (GraphqlZero)
+# Cypress - WEB (Wikipedia) + API (GraphqlZero)
  
 Repositório criado para o desafio de automação da empresa Winnin
 
