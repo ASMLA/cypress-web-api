@@ -1,6 +1,6 @@
 # Cypress - WEB (Wikipedia) + API (GraphqlZero)
  
-Repositório criado para o desafio de automação da empresa Winnin
+Repositório criado para o desafio de automação com Cypress com WEB + API.
 
 ### Pré-requisitos
 
